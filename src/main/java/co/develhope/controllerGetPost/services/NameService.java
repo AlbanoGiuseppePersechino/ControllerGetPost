@@ -5,7 +5,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class NameService {
 
-    public String name() {
-        return "John";
+    private final String name;
+
+    public NameService() {
+        this.name = "John";
     }
+
+    public String getName() {
+        return name;
+    }
+
+
 }

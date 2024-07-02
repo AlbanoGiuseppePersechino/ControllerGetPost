@@ -13,11 +13,11 @@ public class NameController {
 
     @GetMapping("/{name}")
     public String getName() {
-        return nameService.name();
+        return nameService.getName();
     }
 
     @PostMapping("/reverse")
-    public String reverseName(@RequestBody String name){
-        return new StringBuilder(nameService.name()).reverse().toString();
+    public String reverseName(){
+        return new StringBuilder(nameService.getName()).reverse().toString();
     }
 }
